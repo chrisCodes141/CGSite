@@ -1,0 +1,86 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Keeps brand and menu on opposite ends */
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.hamburgerMenu {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto; /* Pushes the menu to the right */
+}
+
+.hamburgerMenu span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.profile-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .hamburgerMenu {
+        display: flex; /* Show hamburger on smaller screens */
+    }
+
+    .nav-list {
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust according to your navbar height */
+        right: 0; /* Aligns the menu to the right */
+        background-color: #333;
+        width: 100%; /* Full width of the screen */
+        display: none; /* Hide by default */
+    }
+
+    .nav-list.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        margin-left: 0;
+        text-align: center; /* Center-align for mobile view */
+    }
+}

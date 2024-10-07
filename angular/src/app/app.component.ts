@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './core/staticComponents/navbar/navbar.component';
+import { ThemeService } from './core/singletonServices/theme.service';
 
 
 @Component({
@@ -11,5 +12,9 @@ import { NavbarComponent } from './core/staticComponents/navbar/navbar.component
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'CG Site';
+  constructor(public themeService: ThemeService) {}
+
+  ngOnInit() {
+  
+  }
 }

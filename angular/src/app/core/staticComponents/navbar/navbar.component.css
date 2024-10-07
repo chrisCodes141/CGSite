@@ -1,6 +1,6 @@
 .navbar {
     display: flex;
-    justify-content: space-between; /* Keeps brand and menu on opposite ends */
+    justify-content: space-between; /* Keeps profile photo and menu on opposite ends */
     align-items: center;
     padding: 1rem;
     background-color: #333;
@@ -59,6 +59,10 @@
     border-radius: 50%;
 }
 
+.spacer {
+    flex: 1 1 auto;
+  }
+
 @media (max-width: 768px) {
     .hamburgerMenu {
         display: flex; /* Show hamburger on smaller screens */
@@ -69,8 +73,11 @@
         position: absolute;
         top: 60px; /* Adjust according to your navbar height */
         right: 0; /* Aligns the menu to the right */
-        background-color: #333;
-        width: 100%; /* Full width of the screen */
+        background-color: #333; /* Dark background for the menu */
+        width: 100; /* Set a fixed width for the menu box */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+        border-radius: 5px; /* Rounded corners */
+        padding: 15px; /* Add padding for the items */
         display: none; /* Hide by default */
     }
 
@@ -81,6 +88,7 @@
     .nav-item {
         margin: 10px 0;
         margin-left: 0;
-        text-align: center; /* Center-align for mobile view */
+        text-align: center; /* Right-align for mobile view */
+        color: white; /* Change text color to white for contrast */
     }
 }

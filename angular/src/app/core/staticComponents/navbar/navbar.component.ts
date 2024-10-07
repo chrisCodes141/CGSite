@@ -1,28 +1,27 @@
-import { NgFor } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { ThemeService } from '../../singletonServices/theme.service';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgIf, MatToolbarModule, MatIconModule, MatButtonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
   isMenuActive: boolean = false;
 
-  constructor(private themeService: ThemeService) {}
-
-  get theme() {
-    return this.themeService.currentTheme;
-  }
+  constructor(public themeService: ThemeService) {}
 
   toggleTheme() {
     this.themeService.toggleTheme();
   }
 
   toggleMenu() {
-    this.isMenuActive = !this.isMenuActive; // Toggle the menu state
+    this.isMenuActive = !this.isMenuActive; 
   }
 }

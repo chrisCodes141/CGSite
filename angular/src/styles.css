@@ -1,16 +1,32 @@
-body.light {
-    background-color: white;
-    color: black;
-  }
-  
-  body.dark {
-    background-color: black;
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Material theme customization */
+.mat-toolbar {
+    background: rgba(255, 255, 255, 0.87);
+}
+
+body.dark-theme .mat-toolbar {
+    background: #333;
+}
+
+.mat-icon {
     color: white;
-  }
-  
-  .content {
-    text-align: center;
-    padding: 50px;
-  }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+    /* Use the inherited color */
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

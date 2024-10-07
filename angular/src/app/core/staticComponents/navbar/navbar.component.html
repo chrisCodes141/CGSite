@@ -4,9 +4,13 @@
             <img src="assets/images/cgPic.JPG" alt="Profile-Pic" class="profile-photo"/>
         </a>
     </div>
-    <button (click)="toggleTheme()">
-        Switch to {{ theme === 'light' ? 'Dark' : 'Light' }} Theme
-      </button>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="toggleTheme()">
+      <mat-icon *ngIf="themeService.isDark(); else lightIcon">brightness_3</mat-icon>
+      <ng-template #lightIcon>
+        <mat-icon>wb_sunny</mat-icon>
+      </ng-template>
+    </button>
     <button class="hamburgerMenu" (click)="toggleMenu()" id="hamburger">
         <span></span>
         <span></span>

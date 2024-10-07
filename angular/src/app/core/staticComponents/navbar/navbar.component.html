@@ -5,7 +5,8 @@
         </a>
     </div>
     <button (click)="toggleTheme()">
-        Switch to {{ theme === 'light' ? 'Dark' : 'Light' }} Theme
+      <span *ngIf="themeService.isDark(); else lightIcon">🌙</span>
+      <ng-template #lightIcon>☀️</ng-template>
       </button>
     <button class="hamburgerMenu" (click)="toggleMenu()" id="hamburger">
         <span></span>

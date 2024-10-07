@@ -13,20 +13,28 @@ export class ThemeService {
   toggleTheme(): void {
     this.isDarkTheme = !this.isDarkTheme;
     document.body.classList.toggle('dark-theme', this.isDarkTheme);
-    if (typeof localStorage !== 'undefined') {
-      localStorage.setItem('isDarkTheme', JSON.stringify(this.isDarkTheme));
-    }
+    this.saveTheme();
   }
 
   loadTheme(): void {
-    if (typeof localStorage !== 'undefined') {
+    if (this.isBrowser()) {
       const savedTheme = localStorage.getItem('isDarkTheme');
       this.isDarkTheme = savedTheme === 'true';
       document.body.classList.toggle('dark-theme', this.isDarkTheme);
     }
   }
 
+  saveTheme(): void {
+    if (this.isBrowser()) {
+      localStorage.setItem('isDarkTheme', JSON.stringify(this.isDarkTheme));
+    }
+  }
+
   isDark(): boolean {
     return this.isDarkTheme;
+  }
+
+  private isBrowser(): boolean {
+    return typeof window !== 'undefined' && typeof window.localStorage !== 'undefined';
   }
 }

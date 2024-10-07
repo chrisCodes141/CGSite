@@ -7,9 +7,18 @@ body.dark-theme {
     color: #ffffff;
 }
 
-.content {
-    text-align: center;
-    padding: 50px;
+/* Material theme customization */
+.mat-toolbar {
+    background: rgba(255, 255, 255, 0.87);
+}
+
+body.dark-theme .mat-toolbar {
+    background: #333;
+}
+
+.mat-icon {
+    color: white;
+    /* Use the inherited color */
 }
 
 html,

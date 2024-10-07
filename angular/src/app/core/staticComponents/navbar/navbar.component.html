@@ -4,6 +4,9 @@
             <img src="assets/images/cgPic.JPG" alt="Profile-Pic" class="profile-photo"/>
         </a>
     </div>
+    <button (click)="toggleTheme()">
+        Switch to {{ theme === 'light' ? 'Dark' : 'Light' }} Theme
+      </button>
     <button class="hamburgerMenu" (click)="toggleMenu()" id="hamburger">
         <span></span>
         <span></span>

@@ -24,4 +24,12 @@ export class NavbarComponent {
   toggleMenu() {
     this.isMenuActive = !this.isMenuActive; 
   }
+
+  scrollToSection(sectionId: string) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      this.toggleMenu();
+    }
+  }
 }

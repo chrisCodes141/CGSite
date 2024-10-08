@@ -46,6 +46,17 @@
 
 .nav-item {
     margin-left: 20px;
+    cursor: pointer; 
+    padding: 10px; 
+    margin: 10px 0;
+    margin-left: 0;
+    text-align: center; 
+    color: white; 
+    padding: 10px; 
+}
+
+.nav-item:hover {
+    background-color: rgba(0, 123, 255, 0.1);
 }
 
 .nav-link {
@@ -71,24 +82,17 @@
     .nav-list {
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Adjust according to your navbar height */
-        right: 0; /* Aligns the menu to the right */
-        background-color: #333; /* Dark background for the menu */
-        width: 100; /* Set a fixed width for the menu box */
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
-        border-radius: 5px; /* Rounded corners */
-        padding: 15px; /* Add padding for the items */
+        top: 75px; /* Adjust according to your navbar height */
+        right: 0; 
+        background-color: #333; 
+        width: 100; 
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); 
+        border-radius: 5px; 
+        padding: 15px; 
         display: none; /* Hide by default */
     }
 
     .nav-list.active {
         display: flex; /* Show when active */
-    }
-
-    .nav-item {
-        margin: 10px 0;
-        margin-left: 0;
-        text-align: center; /* Right-align for mobile view */
-        color: white; /* Change text color to white for contrast */
     }
 }

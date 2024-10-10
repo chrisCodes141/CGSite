@@ -1,3 +1,17 @@
+html, body {
+  height: 100%; /* Ensure full height */
+  margin: 0; /* Remove default margin */
+  overflow: hidden; /* Prevent scrolling on body */
+}
+
+header {
+  position: fixed; 
+  width: 100%; /* Full width */
+  z-index: 1; /* Above other content */
+  background-color: white; 
+}
+
+
 body {
     transition: background-color 0.3s, color 0.3s;
 }
@@ -7,49 +21,8 @@ body.dark-theme {
     color: #ffffff;
 }
 
-.mat-toolbar {
-    background: rgba(255, 255, 255, 0.87);
-}
 
 body.dark-theme .mat-toolbar {
     background: #333;
 }
 
-.mat-icon {
-    color: white;
-}
-
-html, body {
-    height: 100%; /* Ensure full height */
-    margin: 0; /* Remove default margin */
-    overflow: hidden; /* Prevent scrolling on body */
-  }
-  
-  header {
-    position: fixed; 
-    width: 100%; /* Full width */
-    z-index: 1; /* Above other content */
-    background-color: white; 
-  }
-  
-  main {
-    height: 100vh; /* Full viewport height */
-    margin-top: 60px; /* Offset for fixed navbar */
-    display: flex; /* Flexbox layout */
-  }
-  
-  .scroll-container {
-    flex: 1; /* Fill remaining space */
-    overflow-y: auto; /* Enable vertical scrolling */
-    scroll-snap-type: y mandatory; /* Enable scroll snap */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling */
-  }
-  
-  .section {
-    height: 100vh; /* Each section takes full height */
-    scroll-snap-align: start; /* Snap each section to the top */
-    display: flex; /* Center content */
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-  }

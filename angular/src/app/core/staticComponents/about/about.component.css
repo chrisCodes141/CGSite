@@ -1,0 +1,26 @@
+  h2,
+  h3 {
+    color: #007bff;
+  }
+
+  .profile-photo {
+    width: 50%;
+    height: 75%;
+    border-radius: 50%;
+  }
+
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .bio {
+    margin-bottom: 20px;
+  }
+
+  .skills,
+  .hobbies {
+    margin-top: 20px;
+  }

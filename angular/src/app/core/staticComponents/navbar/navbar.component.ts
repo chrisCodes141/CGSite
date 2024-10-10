@@ -29,7 +29,8 @@ export class NavbarComponent {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
-      this.toggleMenu();
+      //avoid menu being open hwen resize window to media 
+      if(this.isMenuActive === true) this.toggleMenu();
     }
   }
 }

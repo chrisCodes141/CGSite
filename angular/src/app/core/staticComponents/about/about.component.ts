@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 export class AboutComponent {
 
   name: string = 'John Doe';
-  bio: string = 'I am a software developer with a passion for creating dynamic and responsive web applications.';
+  bio: string = '';
   skills: string[] = ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS'];
-  hobbies: string[] = ['Reading', 'Traveling', 'Photography', 'Cooking'];
+  hobbies: string[] = ['Excercise', 'Meditating', 'Reading', 'Journaling', 'Traveling', 'Cooking'];
 }

@@ -1,22 +1,26 @@
+/* Main container styling */
 main {
-    height: 100vh; /* Full viewport height */
-    margin-top: 60px; /* Offset for fixed navbar */
-    display: flex; /* Flexbox layout */
-  }
-  
-  .scroll-container {
-    flex: 1; /* Fill remaining space */
-    overflow-y: scroll; /* Enable vertical scrolling */
-    scroll-snap-type: y mandatory; /* Enable scroll snap */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling */
-  }
-  
-  .section {
-    height: 100vh; /* Each section takes full height */
-    scroll-snap-align: start; /* Snap each section to the top */
-    display: flex; /* Center content */
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    overflow: hidden; /* Prevent overflow from affecting the snap scroll */
-  }
+  height: 100vh; /* Full viewport height */
+  margin-top: 70px; /* Adjust for fixed navbar height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scroll container styling */
+.scroll-container {
+  flex: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
+  scroll-snap-type: y mandatory; /* Enable snap type */
+}
+
+/* Section styling */
+.section {
+  height: 100vh; /* Each section takes full height */
+  scroll-snap-align: start; /* Align each section to the top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 2vw;
+  box-sizing: border-box;
+  margin-top: 225px;
+}

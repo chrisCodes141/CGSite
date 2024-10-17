@@ -10,8 +10,8 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
-  name: string = 'John Doe';
-  bio: string = '';
-  skills: string[] = ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS'];
-  hobbies: string[] = ['Excercise', 'Meditating', 'Reading', 'Journaling', 'Traveling', 'Cooking'];
+  name: string = 'Christopher Guzowski';
+  aspires: string[] = ['Solutions Architect', 'Team Lead', 'Entreprenuer'];
+  skills: string[] = ['Java', 'Angular', 'TypeScript', 'JavaScript', 'HTML5 & CSS3'];
+  hobbies: string[] = ['Traveling','Excercise', 'Meditating', 'Reading', 'Journaling',  'Cooking', 'Investing'];
 }

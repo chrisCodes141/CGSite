@@ -17,7 +17,12 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 20px;
+  font-size: 1.5vw;
+}
+
+.flexpad {
+  flex: 1;
+  padding: 1rem;
 }
 
 /* Profile photo styling */
@@ -28,76 +33,44 @@
   border-radius: 50%;
   width: 20vw;                /* Set a responsive width */
   height: 20vw;               /* Set height equal to width for a circle */
-}
-
-
-.left, .right {
-  flex: 1;
-  padding: 1rem;
-}
-
-/* Text section on the right */
-.right {
-  font-size: 2vw;
-  max-width: 50vw;
+  shape-outside: circle();
+  clip-path: circle(50%);
+  float: left;
 }
 
 .bottom {
   display: flex;            /* Use flexbox layout */
   flex-direction: row;     /* Arrange children in a row */
-  justify-content: space-between; /* Distribute space evenly between items */
+  justify-content:space-evenly; /* Distribute space evenly between items */
   align-items: center;     /* Center items vertically */
   width: 100%;             /* Full width of the parent */
-  padding: 1rem;          /* Optional padding */
   box-sizing: border-box;  /* Include padding in width calculations */
 }
 
-/* Biography section */
-.bio {
-  margin-bottom: 20px;
-  max-width: 80%;
-}
+/* bottom sections */
+.skills, .hobbies, .aspire {
 
-.bio h2 {
-  font-size: 2vw;
-}
-
-.bio p {
-  font-size: 1.5vw;
-}
-
-/* Skills and hobbies sections */
-.skills, .hobbies {
-  margin-top: 20px;
   font-size: 1.5vw;
   list-style-type: none;
-  padding: 0;
+  padding: 1rem;
 }
 
-.skills li, .hobbies li {
-  padding: 0.5rem 0;
+.skills li, .hobbies li, .aspire li {
+  padding: 0.2rem 0;
 }
 
 /* Responsive layout for small screens */
 @media (max-width: 768px) {
-
-  .right {
-      font-size: 4vw; /* Increase text size for small screens */
-      max-width: 80vw; /* Constrain text width */
-  }
-
-  .bio h2, .bio p, .skills, .hobbies {
+  .aspire, .skills, .hobbies {
       font-size: 4vw; /* Scale down other text sections */
+      padding: 0;
   }
 
   .photoText {
-      flex-direction: column; /* Stack items vertically on small screens */
       align-items: center;
-
+      font-size: 3vw; /* Increase text size for small screens */
+      max-width: 95vw; /* Constrain text width */
   }
-  .about-container {
-    margin-top: 225px; /* Adjust this value if needed to match the height of the navbar */
-}
 }
 
 

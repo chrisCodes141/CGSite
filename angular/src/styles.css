@@ -1,15 +1,18 @@
+
 html, body {
   height: 100%; /* Ensure full height */
   margin: 0; /* Remove default margin */
   overflow: hidden; /* Prevent scrolling on body */
 }
 
+
+
 header {
-  position: fixed; 
-  width: 100%; /* Full width */
-  z-index: 1; /* Above other content */
-  background-color: white; 
-}
+    position: fixed; 
+    width: 100%; /* Full width */
+    z-index: 1; /* Above other content */
+  }
+  
 
 
 body {

@@ -1,10 +1,12 @@
 .navbar {
     display: flex;
-    justify-content: space-between; /* Keeps profile photo and menu on opposite ends */
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 5px;
     background-color: #333;
     color: white;
+    width: 100%; /* Ensure it takes full width */
+    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 .navbar-brand {
@@ -37,17 +39,15 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap; /* Allow wrapping in smaller viewports */
 }
 
 .nav-item {
     margin-left: 20px;
-    cursor: pointer; 
+    cursor: pointer;
     padding: 10px; 
-    margin: 10px 0;
-    margin-left: 0;
-    text-align: center; 
+    text-align: center;
     color: white; 
-    padding: 10px; 
 }
 
 .nav-item:hover {
@@ -79,8 +79,8 @@
     transition: all 0.3s ease;
 }
 
-
-@media (max-width: 768px) {
+/* Responsive layout for small screens, 768 for all sizes, TEMP FIX: 643px  */
+@media (max-width: 643px) {
     .hamburgerMenu {
         display: flex; /* Show hamburger on smaller screens */
     }
@@ -88,7 +88,7 @@
     .nav-list {
         flex-direction: column;
         position: absolute;
-        top: 75px; /* Adjust according to your navbar height */
+        top: 60px; /* Adjust according to your navbar height */
         right: 0; 
         background-color: #333; 
         width: 100; 

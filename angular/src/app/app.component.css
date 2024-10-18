@@ -1,10 +1,10 @@
 /* Main container styling */
 main {
   height: 100vh; /* Full viewport height */
-  margin-top: 70px; /* Adjust for fixed navbar height */
   display: flex;
   flex-direction: column;
 }
+
 
 /* Scroll container styling */
 .scroll-container {
@@ -20,7 +20,5 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2vh 2vw;
-  box-sizing: border-box;
-  margin-top: 225px;
+  overflow: hidden; /* Prevents content going over to next section */
 }

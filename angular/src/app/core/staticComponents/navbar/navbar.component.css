@@ -79,8 +79,8 @@
     transition: all 0.3s ease;
 }
 
-
-@media (max-width: 768px) {
+/* Responsive layout for small screens, 768 for all sizes, TEMP FIX: 643px  */
+@media (max-width: 643px) {
     .hamburgerMenu {
         display: flex; /* Show hamburger on smaller screens */
     }

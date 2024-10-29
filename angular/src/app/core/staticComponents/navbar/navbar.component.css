@@ -5,8 +5,8 @@
     padding: 5px;
     background-color: #333;
     color: white;
-    width: 100%; /* Ensure it takes full width */
-    box-sizing: border-box; /* Include padding in width calculations */
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 .navbar-brand {
@@ -39,7 +39,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap; /* Allow wrapping in smaller viewports */
+    flex-wrap: wrap;
 }
 
 .nav-item {

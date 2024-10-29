@@ -1,0 +1,23 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="contactForm">
+  <label for="subject">Subject:</label><br>
+  <input type="text" id="subject" formControlName="subject" placeholder="Hey I'm here!" required class="form-input"><br>
+
+  <label for="message">Message:</label><br>
+  <textarea id="message" formControlName="message" placeholder="Sending my message your way!" required class="form-input"></textarea><br>
+
+  <label for="file">Attach files:</label><br>
+  <input type="file" id="file" (change)="onFileSelected($event)" multiple class="file-input">
+  
+  <span *ngIf="fileCount > 0" class="file-count">{{ fileCount }} file(s) selected</span><br>
+
+  <div *ngIf="filesArray.length > 0" id="file-list">
+    <div *ngFor="let file of filesArray" class="file-item">
+      <span>{{ file.name }}</span>
+      <button type="button" (click)="removeFile(file)" class="delete-button">Delete</button>
+    </div>
+  </div>
+
+  <button type="submit" class="submit-button">
+    Submit
+  </button>
+</form>

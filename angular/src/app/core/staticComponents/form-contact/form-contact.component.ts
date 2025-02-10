@@ -2,10 +2,16 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from  '@angular/material/icon';
+
+
 @Component({
   selector: 'app-form-contact',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatIconModule],
   templateUrl: './form-contact.component.html',
   styleUrls: ['./form-contact.component.css']
 })
@@ -29,13 +35,13 @@ export class FormContactComponent {
         this.filesArray.push(input.files[i]);
       }
     }
-    this.fileCount = this.filesArray.length;  // Update file count
-    input.value = '';  // Clear input for re-selection
+    this.fileCount = this.filesArray.length;
+    input.value = ''; 
   }
 
   removeFile(file: File): void {
     this.filesArray = this.filesArray.filter(f => f !== file);
-    this.fileCount = this.filesArray.length;  // Update file count
+    this.fileCount = this.filesArray.length;
   }
 
   onSubmit(): void {
@@ -44,6 +50,6 @@ export class FormContactComponent {
     }
     console.log('Form data:', this.contactForm.value);
     console.log('Files to upload:', this.filesArray);
-    // Handle file upload logic here
+
   }
 }

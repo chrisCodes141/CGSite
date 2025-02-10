@@ -1,1 +1,33 @@
-<p>blog works!</p>
+
+<!--Blogs View-->
+<div *ngIf="view === true">
+
+    <h2>Blog List</h2>
+
+    <div *ngFor="let blog of blogs; let i = index" class="blog">
+        <h3>{{ blog.title }}</h3>
+        <p>{{ blog.text }}</p>
+        <button (click)="deleteBlog(i)">X</button>
+    </div>
+    
+    <button (click) = "blogsView()"> create a blog</button>
+
+    <ul *ngFor="let blog of blogs"></ul>
+
+</div>
+
+
+<!--Create Blogs View-->
+<div *ngIf="view === false">
+    <h2>Create a Blog!</h2>
+    
+   
+
+    <input [(ngModel)]="title" placeholder="Enter Blogs Title"><p></p>
+    <textarea [(ngModel)]="text" placeholder="Enter Blogs Text"></textarea><p></p>
+    <button (click)="addBlog()">Add Blog</button>
+
+    <p></p><p></p>
+
+    <button (click) = "blogsView()"> Back to Blogs List</button>
+</div>

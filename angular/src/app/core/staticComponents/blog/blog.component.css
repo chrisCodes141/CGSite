@@ -1,0 +1,15 @@
+button {
+    color: red;
+    background-color: blue;
+}
+
+.blog {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  textarea {
+    width: 300px;
+    height: 150px;
+  }

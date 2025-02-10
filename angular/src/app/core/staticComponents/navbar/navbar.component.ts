@@ -29,7 +29,7 @@ export class NavbarComponent {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
-      //avoid menu being open hwen resize window to media 
+      //avoid menu being open when resize window to smaller screen
       if(this.isMenuActive === true) this.toggleMenu();
     }
   }

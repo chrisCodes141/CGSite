@@ -1,0 +1,67 @@
+<!-- <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="contactForm">
+  <label for="subject">Subject:</label><br>
+  <input type="text" id="subject" formControlName="subject" placeholder="Hey I'm here!" required class="form-input"><br>
+
+  <label for="message">Message:</label><br>
+  <textarea id="message" formControlName="message" placeholder="Sending my message your way!" required
+    class="form-input"></textarea><br>
+
+    <div class="file-upload-container">
+      <input type="file" id="file" (change)="onFileSelected($event)" multiple class="file-input">
+      
+      <button type="submit" class="submit-button">
+        Submit
+      </button>
+      <br>
+      <span *ngIf="fileCount > 0" class="file-count">{{ fileCount }} file(s) selected</span>
+    </div>
+
+
+  <div *ngIf="filesArray.length > 0" id="file-list">
+    <div *ngFor="let file of filesArray" class="file-item">
+      <span>{{ file.name }}</span>
+      <button type="button" (click)="removeFile(file)" class="delete-button">X</button>
+    </div>
+  </div>
+
+
+</form> -->
+
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="contactForm">
+  
+  <!-- Subject input with Angular Material form field -->
+  <mat-form-field class="full-width">
+    <mat-label>Subject</mat-label>
+    <input matInput type="text" formControlName="subject" placeholder="Hey I'm here!" required>
+  </mat-form-field>
+
+  <!-- Message textarea with Angular Material form field -->
+  <mat-form-field class="full-width">
+    <mat-label>Message</mat-label>
+    <textarea matInput formControlName="message" placeholder="Sending my message your way!" required></textarea>
+  </mat-form-field>
+
+  <div class="file-upload-container">
+    <!-- File input (native) -->
+    <input type="file" id="file" (change)="onFileSelected($event)" multiple class="file-input">
+    
+    <!-- Angular Material submit button -->
+    <button mat-raised-button color="primary" type="submit">
+      Submit
+    </button>
+    
+    <!-- Display selected file count if files are selected -->
+    <span *ngIf="fileCount > 0" class="file-count">{{ fileCount }} file(s) selected</span>
+  </div>
+
+  <!-- File list display with delete button -->
+  <div *ngIf="filesArray.length > 0" id="file-list">
+    <div *ngFor="let file of filesArray" class="file-item">
+      <span>{{ file.name }}</span>
+      <button mat-icon-button type="button" (click)="removeFile(file)" aria-label="Remove file">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </div>
+
+</form>

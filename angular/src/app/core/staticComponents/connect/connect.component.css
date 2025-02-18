@@ -1,5 +1,5 @@
 .connect-container {
-    display: flex;
+    display: flex; 
     flex-wrap: wrap; 
     justify-content: space-between; 
     padding: 20px;
@@ -7,45 +7,46 @@
   }
   
   .section-container {
-    flex: 1 1 calc(50% - 20px); /* Trying : Two sections side by side with gap adjustment */
     background-color: #f9f9f9; 
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 15px; 
-    margin-bottom: 20px;
-  }
-  
-
-  .content-container {
-    margin-bottom: 15px; 
+    padding: 5px; 
+    margin-bottom: 5px;
   }
   
   .content-container span {
     font-size: 1.5rem; 
     font-weight: bold; 
   }
-  
-  /* Links styles */
-  .content-container a {
-    color: #1133ce; 
-    text-decoration: none;
-  }
-  
+
+  #resumecv a {
+    white-space: nowrap; /* Prevents text wrapping in an undesired way */
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
   .content-container a:hover {
     text-decoration: underline;
   }
 
-  
+  a {
+    color:#8b8b8b
+  }
+
+  .contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
 
 .content-container, .section-container {
     background-color: inherit;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   }
-  
+
   /* Media query for smaller screens */
   @media (max-width: 600px) {
     .section-container {
-      flex: 1 1 100%; /*TRYING Stack sections on top of each other */
+      flex: 1 1 100%;
     }
   }

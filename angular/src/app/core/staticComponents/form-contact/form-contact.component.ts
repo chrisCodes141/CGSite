@@ -45,6 +45,7 @@ export class FormContactComponent {
   }
 
   onSubmit(): void {
+    return; //Temporary to finish logic w/o breaking
     if (this.contactForm.invalid) {
       return;
     }

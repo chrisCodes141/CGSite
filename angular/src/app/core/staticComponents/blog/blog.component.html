@@ -10,7 +10,7 @@
         <button (click)="deleteBlog(i)">X</button>
     </div>
     
-    <button (click) = "blogsView()"> create a blog</button>
+    <button (click) = "blogsView()" class="pulse"> create a blog</button>
 
     <ul *ngFor="let blog of blogs"></ul>
 
@@ -22,12 +22,27 @@
     <h2>Create a Blog!</h2>
     
    
+    <div class="form__group field">
 
-    <input [(ngModel)]="title" placeholder="Enter Blogs Title"><p></p>
-    <textarea [(ngModel)]="text" placeholder="Enter Blogs Text"></textarea><p></p>
-    <button (click)="addBlog()">Add Blog</button>
+        <input type="input" class="form__field"[(ngModel)]="title" placeholder="Enter Blogs Title" required="">
+        <label for="name" class="form__label">Enter Blogs Title</label>
+
+    </div>
+    
+    
+    <p></p>
+
+    <div class="form__group field">
+
+        <textarea [(ngModel)]="text" class="form__field" placeholder="Enter Blogs Text"></textarea>
+        <label for="name" class="form__label">Enter Blogs Text</label>
+
+    </div>
+
+    <p></p>
+    <button (click)="addBlog()" class="pulse">Add Blog</button>
 
     <p></p><p></p>
 
-    <button (click) = "blogsView()"> Back to Blogs List</button>
+    <button (click) = "blogsView()" class="pulse"> Back to Blogs List</button>
 </div>

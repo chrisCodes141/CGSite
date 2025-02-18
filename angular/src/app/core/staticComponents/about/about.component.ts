@@ -13,5 +13,5 @@ export class AboutComponent {
   name: string = 'Christopher Guzowski';
   aspires: string[] = ['Solutions Architect', 'Team Lead', 'Entreprenuer'];
   skills: string[] = ['Java', 'Angular', 'TypeScript', 'JavaScript', 'HTML5 & CSS3'];
-  hobbies: string[] = ['Traveling','Excercise', 'Meditating', 'Reading', 'Journaling',  'Cooking', 'Investing'];
+  hobbies: string[] = ['Reading', 'Excercise', 'Cooking', 'Investing', 'Traveling'];
 }

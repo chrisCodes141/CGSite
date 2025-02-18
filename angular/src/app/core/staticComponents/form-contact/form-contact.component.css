@@ -29,11 +29,6 @@
   cursor: pointer;
 }
 
-.file-item button:hover {
-  background-color: #ff3333;
-}
-
-
 .form-input {
   width: 100%;
   padding: 8px;
@@ -44,11 +39,9 @@
   margin: 8px 0;
 }
 
-
 .file-count {
   margin-left: 8px;
 }
-
 
 .delete-button {
   padding: 5px 10px;
@@ -59,35 +52,53 @@
   border-radius: 4px;
 }
 
-.submit-button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
+
+#file-list {
+  margin-top: 10px;
+  overflow: hidden;
 }
 
-/* new angular form stuff*/
+/* File item styling with better flex behavior */
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  overflow: hidden; /* Prevents overflow in individual file items */
+}
 
-  .full-width {
-    width: 100%;
-  }
-  
-  .file-upload-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+.file-input {
+  margin: 8px 0;
+  max-width: 100%; 
+  box-sizing: border-box;
+}
 
-  #file-list {
-    margin-top: 10px;
-  }
+/* File upload container with better spacing */
+.file-upload-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; 
+}
 
-  .file-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+/* Styling for file count text */
+.file-count {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: #757575;
+}
 
+/* For full-width form fields */
+.full-width {
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+}
 

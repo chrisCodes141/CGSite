@@ -1,10 +1,8 @@
-/* Main container styling */
 main {
   height: 100vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
 }
-
 
 /* Scroll container styling */
 .scroll-container {
@@ -15,10 +13,11 @@ main {
 
 /* Section styling */
 .section {
-  height: 100vh; /* Each section takes full height */
+  height: 100vh;
   scroll-snap-align: start; /* Align each section to the top */
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden; /* Prevents content going over to next section */
 }
+

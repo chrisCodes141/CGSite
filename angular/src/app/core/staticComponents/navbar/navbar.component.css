@@ -1,13 +1,23 @@
 .navbar {
+    margin-left:5%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    background-color: #333;
+    background-color: #777777;
     color: white;
-    width: 100%; 
+    width: 90%; 
     box-sizing: border-box; 
+    border-radius: 33px;
+
+    transition: background-color .3s ease-in-out, transform .15s ease-in-out;
 }
+
+.navbar:hover{
+    background-color: #4b4b4b;
+    transform: scale(1.03);
+}
+
 
 .navbar-brand {
     display: flex;
@@ -51,7 +61,8 @@
 }
 
 .nav-item:hover {
-    background-color: rgba(0, 123, 255, 0.1);
+    background-color: rgba(150, 150, 150, 0.5);
+    border-radius: 20px;
 }
 
 .nav-link {

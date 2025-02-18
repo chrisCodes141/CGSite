@@ -21,35 +21,36 @@
 
 .flexpad {
   flex: 1;
-  padding: .5rem;
+  padding: .3rem;
 }
 
 /* Profile photo styling */
 .profile-photo {
-  max-width: 100%;            /* Prevents image from exceeding container width */
-  height: auto;               /* Maintains aspect ratio */
-  display: block;             /* Prevents bottom space due to inline-block */
+  max-width: 100%;          
+  height: auto;             
+  display: block;           
   border-radius: 50%;
-  width: 20vw;                
-  height: 20vw;               
+  width: 18vw;                
+  height: 18vw;               
   shape-outside: circle();
   clip-path: circle(50%);
   float: left;
 }
 
+/* bottom sections */
 .bottom {
-  display: flex;            /* Use flexbox layout */
-  flex-direction: row;     /* Arrange children in a row */
-  justify-content:space-evenly; /* Distribute space evenly between items */
-  align-items:flex-start;     /* Center items from top */
-  width: 100%;             /* Full width of the parent */
-  box-sizing: border-box;  /* Include padding in width calculations */
+  display: flex;          
+  flex-direction: row;   
+  justify-content:space-evenly;
+  align-items:flex-start;    
+  width: 100%;             
+  box-sizing: border-box;  
 }
 
-/* bottom sections */
 .skills, .hobbies, .aspire {
   font-size: 1.5vw;
   padding: 1rem;
+  
 }
 
 .skills li, .hobbies li, .aspire li {
@@ -58,9 +59,72 @@
 }
 
 .skills h3, .hobbies h3, .aspire h3 {
-  text-decoration: underline;
+  position:relative;
   text-align: center;
+  left: 40%;
+  top: 40px;
 }
+
+
+/* From Uiverse.io by neerajbaniwal */ 
+#special-shine {
+  transform: translate(-50%, -50%);
+  padding: 12px 48px;
+  color: #fff;
+  background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #c2c2c2 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  white-space: nowrap;
+}
+@-moz-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-o-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+
+
 
 /* Responsive layout for small screens, 768 for all sizes, TEMP FIX: 643px  */
 

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Blog } from '../../models/blog.model';
 import { BlogService } from '../../singletonServices/blog.service';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-blog',
@@ -15,19 +15,23 @@ export class BlogComponent implements OnInit {
 
   protected view: boolean = true;
 
+  expandedBlogs: boolean[] = [];
+
   blogs: Blog[] = [];
   title: string = '';
   text: string = '';
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.view = true;
     this.loadBlogs();
+    this.addExampleBlogs();
   }
 
-  constructor(private blogService: BlogService) {}
+  constructor(private blogService: BlogService) { }
 
   loadBlogs() {
     this.blogs = this.blogService.getBlogs();
+    this.expandedBlogs = new Array(this.blogs.length).fill(false);
   }
 
   addBlog(): void {
@@ -44,9 +48,27 @@ export class BlogComponent implements OnInit {
     this.blogService.deleteBlog(index);
     this.loadBlogs();
   }
-  
-  blogsView(){
+
+  blogsView() {
     this.view = !this.view;
+  }
+
+  toggleExpand(index: number): void {
+    this.expandedBlogs[index] = !this.expandedBlogs[index];
+  }
+
+  addExampleBlogs() {
+    const blogs = this.blogService.getBlogs();
+
+    if (blogs.length === 0){
+      const exampleBlogs: Blog[] = [
+        { title: 'Hey there!', text: 'Welcome to the blog section!'},
+        { title: 'These are just a couple example', text: 'Please create your own ^^! In the future, I will be improving scalability for numerous posts and implementing storage to a database so its not just in local storage.'}
+      ];
+
+      exampleBlogs.forEach(blog => this.blogService.addBlog(blog));
+      this.loadBlogs();
+    }
   }
 
 }

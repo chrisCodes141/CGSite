@@ -45,12 +45,12 @@ export class FormContactComponent {
   }
 
   onSubmit(): void {
-    return; //Temporary to finish logic w/o breaking
+    alert('Backend Functionality coming soon!');
+    return; //Will implement backend functionality
     if (this.contactForm.invalid) {
       return;
     }
     console.log('Form data:', this.contactForm.value);
     console.log('Files to upload:', this.filesArray);
-
   }
 }

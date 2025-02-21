@@ -1,1 +1,0 @@
-//serve Angular from springboot

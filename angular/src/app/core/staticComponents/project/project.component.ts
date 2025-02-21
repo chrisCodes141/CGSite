@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectComponent implements OnInit {
   message: string = 'Welcome or welcome back user # (backend coming soon)';
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   ngOnInit() {
   }

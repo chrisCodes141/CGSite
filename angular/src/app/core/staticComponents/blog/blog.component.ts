@@ -5,11 +5,10 @@ import { BlogService } from '../../singletonServices/blog.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-blog',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './blog.component.html',
-  styleUrl: './blog.component.css'
+    selector: 'app-blog',
+    imports: [CommonModule, FormsModule],
+    templateUrl: './blog.component.html',
+    styleUrl: './blog.component.css'
 })
 export class BlogComponent implements OnInit {
 
@@ -63,7 +62,7 @@ export class BlogComponent implements OnInit {
     if (blogs.length === 0){
       const exampleBlogs: Blog[] = [
         { title: 'Hey there!', text: 'Welcome to the blog section!'},
-        { title: 'These are just a couple example', text: 'Please create your own ^^! In the future, I will be improving scalability for numerous posts and implementing storage to a database so its not just in local storage.'}
+        { title: 'These are just a couple example', text: 'Please create your own ^^! Play around with the various functionalities, such as the red X (delete my neighbor, not me!), read more to expand, and create more to fill this page with posts!'}
       ];
 
       exampleBlogs.forEach(blog => this.blogService.addBlog(blog));

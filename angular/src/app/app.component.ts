@@ -9,11 +9,10 @@ import { ThemeService } from './core/singletonServices/theme.service';
 
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, NavbarComponent, AboutComponent, ConnectComponent, BlogComponent, ProjectComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    imports: [RouterOutlet, NavbarComponent, AboutComponent, ConnectComponent, BlogComponent, ProjectComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   constructor(public themeService: ThemeService) {}
